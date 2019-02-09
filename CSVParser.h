@@ -4,7 +4,6 @@
 #include <iostream>
 #include <vector>
 
-
 // Reading characters from input stream and parsing them into CSV format.
 // The CSV format is based on RFC 4180(https://tools.ietf.org/html/rfc4180)
 // Differences from RFC 4180:
@@ -34,11 +33,10 @@ public:
     // but the source has to be created until the call of this constructor.
     // The separator and the quote mark character cannot be change, if the format of csv files
     // differ, need to create different parsers.
-    explicit CSVParser(std::istream &is, char separator=',', char quote_mark='"');
+    explicit CSVParser(std::istream &is, char separator = ',', char quote_mark = '"');
 
     // The setup of the input source is necessary
     CSVParser() = delete;
 };
-
 
 #endif //CSV_PARSER_CSV_PARSER_H
